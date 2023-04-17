@@ -104,7 +104,7 @@ class AnalogFunction {
     }
 
     public double x(double a) {
-        return amplitude * Math.sin(angularFrequency * a + initialPhase);
+        return amplitude * Math.cos(angularFrequency * a + initialPhase);
     }
 
     public double s(double a) {
