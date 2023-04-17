@@ -4,13 +4,16 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        AnalogFunction analogFunction = new AnalogFunction("x(t) = -6 * cos(0.63t + 3.14159)", 0.1, 10);
+        String function = "x(t) = -6 * cos(0.63t + 3.14159)";
+        double samplingPeriod = 0.5;
+        int sampleCount = 10;
+        AnalogFunction analogFunction = new AnalogFunction(function, samplingPeriod, sampleCount);
         System.out.println(analogFunction);
         System.out.println("Recovered Signal Values = " + Arrays.toString(analogFunction.recover()));
-        analogFunction.calculateApproximationError(0.3);
+        analogFunction.calculateApproximationError(1.8);
     }
-
 }
+
 
 class AnalogFunction {
 
