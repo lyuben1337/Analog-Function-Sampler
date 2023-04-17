@@ -4,7 +4,7 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        AnalogFunction analogFunction = new AnalogFunction("x(t) = 6 * cos(6.28t + 0.5235)", 0.1, 10);
+        AnalogFunction analogFunction = new AnalogFunction("x(t) = -6 * cos(0.63t + 3.14159)", 0.1, 10);
         System.out.println(analogFunction);
         System.out.println("Recovered Signal Values = " + Arrays.toString(analogFunction.recover()));
         analogFunction.calculateApproximationError(0.3);
